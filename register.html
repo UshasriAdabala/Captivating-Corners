@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script>
+
+            function validateFields()
+
+            {
+
+                var valid=false;
+
+                var username=document.forms[0].elements[0].value;
+
+                var password=document.forms[0].elements[1].value;
+
+                var emailid=document.forms[0].elements[3].value;
+
+                var phno=document.forms[0].elements[4].value;
+
+                var username_va=new RegExp("[a-z A-Z \.]{10,}","g");
+
+                var password_va=new RegExp("^[A-Z][0-9 a-z A-Z]{6,11}","g");
+
+                var emailid_va=/[\w_|\.]+@[\w]+\.[a-z]/;
+
+                var phno_va=new RegExp("[0-9]{10}");
+
+                if(username.match(username_va))
+
+                {
+
+                    if(password.match(password_va))
+
+                    {
+
+                        if(emailid.match(emailid_va))
+
+                        {
+
+                            if(phno.match(phno_va))
+
+                            {
+
+                                alert("All field values you entered are correct");
+
+                                valid=true;
+
+                            }
+
+                            else{
+
+                                alert("Phone number is invalid");
+
+                            }
+
+                        }
+
+                        else{
+
+                                alert("Email-id is invalid");
+
+                            }
+
+                    }
+
+                    else{
+
+                                alert("Password is invalid");
+
+                            }
+
+                }
+
+                else{
+
+                                alert("Username should contain atleast 10 characers.");
+
+                            }
+
+                        }
+
+            
+
+        </script>
+<style>
+body
+{
+background-image:url("register.webp");
+background-attachment:fixed;
+  background-repeat:no repeat;
+  background-size:100% 100%;
+}
+h1{
+font-family: Verdana, sans-serif;
+}
+input{
+	padding: 3px 90px;
+}
+table{
+width:50%;
+
+}
+</style>
+</head>
+<body>
+<form method="post" action="#">
+<div class="input">
+<table align="center" cellspacing="10">
+<caption><h1 align="center">REGISTRATION FORM</h1></caption>
+<tr>
+<td><label>Name:</label></td><br>
+<td><input type="text"></td></tr>
+<tr>
+<td><label>Password:</label></td><br>
+<td><input type="password"></td></tr>
+<tr>
+<td><label>Address</label></td><br>
+<td><input type="text"></td></tr>
+<tr>
+<td><label>Email ID</label></td><br>
+<td><input type="text"></td></tr>
+<tr>
+<td><label>Phone Number</label></td><br>
+<td><input type="text"></td></tr>
+<tr>
+<td><label>Sex:</label></td><br>
+<td><input type="radio">MALE<input type="radio">FEMALE</td></tr>
+<tr>
+<td><label><Date Of Birth:</label></td><br>
+<td><input type="date"></td></tr>
+<tr>
+<td><label>Languages Known:</label></td><br>
+<td><input type="radio">English<br><input type="radio">Telugu<br><input type="radio">Hindi<br><input type="radio">Tamil</td></tr>
+<tr><td><input align="center" type="submit" value="Submit" onclick="validateFields()"></td>
+<td><input align="center" type="submit" value="Reset"></td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>

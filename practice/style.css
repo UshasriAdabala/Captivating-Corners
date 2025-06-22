@@ -1,0 +1,21 @@
+/* Styles for classes */
+.heading {
+    text-align: center;
+    color: blue;
+}
+
+.container p {
+    font-style: italic;
+}
+
+/* Styles for ID */
+#special-paragraph {
+    font-weight: bold;
+    color: silver;
+}
+
+/* Style for ID-based footer */
+#page-footer {
+    text-align: center;
+    color: red;
+}
